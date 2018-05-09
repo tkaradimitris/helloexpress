@@ -7,6 +7,12 @@ app.get('/', function(req, res) {
   });
 });
 
+app.get('/data/:id', function(req, res) {
+  res.send({
+    "Output": "data.id=" + req.params.id
+  });
+});
+
 app.post('/', function(req, res) {
   res.send({
     "Output": "Hello World!"
